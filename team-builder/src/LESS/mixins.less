@@ -1,0 +1,17 @@
+.flex(@dir:row, @justify:space-around, @align:center, @wrap: wrap) {
+    display: flex;
+    flex-direction: @dir;
+    justify-content: @justify;
+    align-items: @align;
+    flex-wrap: @wrap;
+}
+
+.submit(@bg:white; @color:black) {
+    background-color: @bg;
+    color: @color;
+    font-size: 2rem;
+    text-align:center;
+    padding: 12px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
