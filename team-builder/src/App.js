@@ -1,15 +1,10 @@
 import React, {useState} from 'react';
-import Teammate from './components/Teammate';
+import Form from './components/Form';
 import Team from './components/Team';
 import './CSS/index.css';
 
 function App() {
-  const [team, setTeam] = useState([{
-    id: 1,
-    name: "Emily Richard",
-    email: "richard.emily.e@gmail.com",
-    role: "Student"
-  }]);
+  const [team, setTeam] = useState([{name: "Emily Richard", email: "emily@gmail.com", role: "Lambda Student"}]);
 
   const addNewTeammate = person => {
     const newTeammate = {
@@ -24,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <h1>My Team</h1>
-      <Teammate addNewTeammate={addNewTeammate} />
+      <Form addNewTeammate={addNewTeammate} />
       <Team team={team} />
     </div>
   );

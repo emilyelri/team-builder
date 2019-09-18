@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const Teammate = props => {
-    // console.log("Props", props);
+    // console.log("Props", props.setMemberToEdit);
     const [person, setPerson] = useState({
         name: "",
         email: "",
@@ -20,11 +20,11 @@ const Teammate = props => {
 
     return (
         <form onSubmit={submitForm}>
-            <label htmlFor="name">Name: </label>
+            <label htmlFor="name">Name:   </label>
             <input id="name" type="text" name="name" value = {person.name} onChange={handleChanges} />
-            <label htmlFor="email">Email: </label>
+            <label htmlFor="email">Email:   </label>
             <input id="email" type="text" name="email" value = {person.email} onChange={handleChanges} />
-            <label htmlFor="role">Role: </label>
+            <label htmlFor="role">Role:   </label>
             <input id = "role" type="text" name= "role" value = {person.role} onChange={handleChanges} />
             <button type="submit">Add</button>
         </form>

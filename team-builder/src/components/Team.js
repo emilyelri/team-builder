@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
+import TeammateCard from './TeammateCard';
 
 const Team = props => {
     return (
-        <>
         <div className="cardContainer">
           {props.team.map(teammate => (
-            <div className="card" key={teammate.id}>
-              <h2>{teammate.name}</h2>
-              <p>{teammate.email}</p>
-              <p>{teammate.role}</p>
-            </div>
+            <TeammateCard
+              id={teammate.id}
+              name={teammate.name}
+              email={teammate.email}
+              role={teammate.role}
+            />
           ))}
-          </div>
-        </>
-      );
-    };
+          </div>    
+    );
+  };
 
 export default Team;
